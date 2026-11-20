@@ -1,5 +1,5 @@
 # riscv-cache-controller-verification
-Personal Project
+## Personal Project
 Projected Timeline: Spring 2027 (Tesla Internship time) - Early May 2027
 
 
