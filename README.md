@@ -7,7 +7,7 @@ A SystemVerilog testbench and data cache (D-cache) project for RISC-V that check
 
 When a processor runs code, it reads and writes data constantly. Main memory is slower than the processor, so a **data cache** acts as a small, fast notepad right next to the CPU.
 
-This project builds a D-cache and a test environment to make sure a write-back cache doesn't lose or scramble data in tricky situations—specifically when:
+This project builds a D-cache and a test environment to make sure a write-back cache doesn't lose or scramble data specifically when:
 1. The cache runs out of room and needs to **evict** (kick out) old data.
 2. That data was **modified** ("dirty") while sitting in the cache, so it must be saved back to main memory first.
 3. Main memory is busy and **stalls** (says "not ready yet") right in the middle of that write-back.
@@ -26,7 +26,7 @@ This project builds a D-cache and a test environment to make sure a write-back c
 - **Interface (`cache_if`):** Wires connecting the CPU side, the D-cache, and the memory side with clean clock timing.
 - **Stimulus Driver:** Sends directed test cases and randomized reads/writes to stir up edge cases.
 - **Stall-Injecting Memory Model:** A simulated memory that randomly stalls or slows down responses so I can test backpressure on demand.
-- **Scoreboard & Golden Memory:** Keeps a clean copy of memory and checks every read and write-back against it.
+- **Scoreboard & Memory:** Keeps a clean copy of memory and checks every read and write-back against it.
 - **Assertions (SVA):** Automatic rules that flag bad states—like signals changing illegally while stalled or `X` (unknown) values leaking onto control lines.
 
 ## Timeline
