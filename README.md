@@ -1,4 +1,5 @@
 # RISC-V Cache Controller Verification
+> Write-back RISC-V data cache controller and SystemVerilog verification testbench with SVA assertions, stall modeling, and Digilent Cora Z7 FPGA bring-up
 
 Built near silicon, literally and geographically hehehe. I’m planning to work on this project while I’m in Fremont, CA, teaching myself SystemVerilog and testing my design on a Digilent Cora Z7-07S.
 
@@ -50,11 +51,11 @@ A test summary, commands to reproduce each test, an annotated dirty-eviction wav
 
 ## Planned folders
 
-- `rtl/` — cache controller and memory interface
-- `tb/` — driver, memory model, and scoreboard
-- `sva/` — protocol assertions
-- `tests/` — directed and randomized test cases
-- `vivado/` — project scripts and Cora Z7 constraints
-- `results/` — waveforms, test summaries, and board results
+- `rtl/` - cache controller and memory interface
+- `tb/` - driver, memory model, and scoreboard
+- `sva/` - protocol assertions
+- `tests/` - directed and randomized test cases
+- `vivado/` - project scripts and Cora Z7 constraints
+- `results/` - waveforms, test summaries, and board results
 
 
